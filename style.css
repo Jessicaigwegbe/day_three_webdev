@@ -1,0 +1,283 @@
+
+
+header{
+    display:flex;
+    color: rgb(212, 13, 149);
+    background-image: url(https://images.pexels.com/photos/1128797/pexels-photo-1128797.jpeg?auto=compress&cs=tinysrgb&w=1200);
+   background-size: cover;
+    background-position:left;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  transition: all .5s ;
+
+}
+
+
+.site-logo {
+    margin-left: 20px;
+    width: 80%;
+    height: 80% ;
+  
+}
+
+* { margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+ list-style: none;
+    text-decoration: none;
+}
+
+
+.body-text { display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+
+
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(201, 221, 224);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.heading{
+    color: rgb(212, 13, 149);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 30px;
+}
+
+
+
+
+.nav-links a{color: black;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 14px;
+padding: 2px 4px;
+
+}
+
+
+.nav-links li a:hover:not(.active){
+    background-color: cadetblue;
+}
+
+
+.nav-links li a.active {background-color: rgb(218, 113, 185);
+
+}
+
+
+.container{
+    display: flex;
+  
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(182, 204, 204);
+    height: 450px;
+
+
+}
+
+.box{
+    flex: 1 1 30%;
+    padding: 0px 20px;
+    margin: 0px 10px;
+    color: black;
+    text-align: center;
+    height: 210px;
+    background-color: #f6aad6;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+footer{ position:relative;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 350px;
+    background-image: url(https://images.pexels.com/photos/552789/pexels-photo-552789.jpeg?auto=compress&cs=tinysrgb&w=1200);
+     text-align: left;
+     background-size: cover;
+     display: inline-flex;
+    
+    }
+  
+   
+
+    img { 
+  
+        border-radius: 30%;
+        max-width: 100%;
+        height: auto;
+        margin-right: auto;
+       
+    
+    }
+        
+       .form{text-align: center;
+        border-color: #f6aad6;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-style: oblique;
+
+       }
+       
+       button{background-color: rgb(67, 188, 129);
+        font-size: 40px;
+        border-color:rgb(67, 188, 129); ;
+
+       }
+   
+   
+  .foot-links {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(218, 226, 233);
+
+  }
+
+
+
+
+
+
+  .sidebar{
+   
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgb(179, 186, 197);
+    transition: all .5s ease ;
+  }
+
+
+  .sidebar h4 { font-size: 22px;
+    color: rgb(230, 237, 237);
+    text-align: center;
+    line-height: 70px;
+    background-color: rgb(195, 107, 166);
+    user-select: none;
+   
+
+  }
+
+
+  .sidebar ul a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: rgb(11, 11, 11);
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(218, 113, 185);
+    border-bottom: 1px brown;
+    transition: .4s;
+
+  
+  }
+
+
+  ul li:hover a{
+    padding-left: 50px;}
+
+  .sidebar ul a i {
+    margin-right: 16px;
+  }
+
+
+  #check{
+    display: none;
+  }
+
+  label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background-color: #ea7fbd;
+    border-radius: 1px;
+  }
+
+  label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 25px;
+    color: black;
+padding: 6px 12px;
+transition: all .5s ;
+   }
+
+   label #cancel {
+    z-index: 1111;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color:black;
+    padding: 4px 9px;
+    transition: all .5s ease;
+   
+   }
+
+   #check:checked ~ .sidebar{
+    left:0;
+   }
+
+   #check:checked ~ label #btn {
+    left:250px;
+    opacity: 0;
+    pointer-events: none;
+   }
+
+   #check:checked ~ label #cancel {
+   left: 195px;
+   }
+
+  @media (min-width: 768px){
+    .box{ flex: 1 1 30%}
+
+  }
+
+    
+  
+  @media (max-width: 768px){
+    .box{ flex: 1 1 45%}
+  }
+
+
+
+  @media (min-width: 480px){
+    .box{ flex: 1 1 100%}
+  }
+
