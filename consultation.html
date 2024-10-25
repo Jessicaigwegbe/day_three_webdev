@@ -1,13 +1,43 @@
+
 <!DOCTYPE html>
-       <head>
+<html>
+    <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <link rel="stylesheet" link type="text/css" link href="style.css">
 
         <title> JMG Tele Health</title>
-    </head>
+        <style>
 
-    <body>
+            form{
+                width:400px;
+                margin:auto;
+                font-size: 20px;
+            }
+
+            label,input{
+                display: block;
+                margin: 0 0 10px 0;
+                font-size: 20px;
+            }
+           
+           
+           
+           
+            .error{
+                color: red;
+                font-size: 12px;
+            }
+
+            .regform{
+                display: block;
+                width:400px;
+                margin:auto;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+        <body>
         
         <header >
             
@@ -48,6 +78,70 @@
     <div class="body-text"><h1> This Is The Consultation Page</h1></div>
 
 
-    </body>
+
+            <h3 class="regform"> Registration Form</h3> <br><br>
+
+
+            <form id="registrationForm"  onsubmit="return validateForm()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <span id="nameError" class="error"></span>
+                
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <span id="emailError" class="error"></span>
+                   
+
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password">
+                <span id="passwordError" class="error"></span>
+                
+                <label for="confirmpassword">ConfrimPassword:</label>
+                <input type="text" id="confirmpassword" name="confirmpassword">
+                <span id="confirmpasswordError" class="error" ></span>
+
+
+                <label for="age">Age;</label>
+                <input type="text" id="age" name="age">
+                <span id="ageError" class="error"></span>
+                
+                <br>
+                <p>Gender</p> <br>
+                
+                <label for="gender">Female</label>
+                <input type="radio" id="gender" name="gender">
+
+                <label for="gender">Male</label>
+                <input type="radio" id="gender" name="gender">
+                <span id="genderError" class="error"></span>
+            
+                <label for="country">Country</label>
+                <select name ="country" id="country">
+                 <option value="Nigeria"> Nigeria</option>
+                 <option value="SouthAfrica">SouthAfrica</option>
+                 <option value="Angola">Angola</option>
+                 <option value="Mali">Mali</option>
+     
+                </select> <br><br>
+
+                 <label for="toc"> Terms And Conditions</label>
+                 <input type="checkbox" id="toc" name="toc">
+                 <span id="Error" class="error"></span>
+
+                <input type="submit" value="Register">
+           
+            </form>
+           <script src="script.js"></script>
+        </body>
+    
 </html>
 
+
+
+
+
+
+
+
+
+   
